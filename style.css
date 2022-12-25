@@ -1,0 +1,66 @@
+:root {
+  --colorDeSideBar: lightblue;
+  --colorDeSideBarSeleccionado: white;
+  --colorDeLetraSideBar: #555;
+  --colorDeLetraSideBarHover: black;
+}
+
+* {
+  padding: 0%;
+  margin: 0%;
+}
+
+#contenedor-menu-lateral {
+  height: 100vh;
+  width: 200px;
+  background-color: var(--colorDeSideBar);
+  padding-left: 10px;
+  padding-top: 20px;
+}
+
+#menu-lateral > li {
+  font-family: "century gothic",Helvetica, "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  color: var(--colorDeLetraSideBar);
+  letter-spacing: 1.5px;
+  list-style: none;
+  text-align: center;
+  padding: 10px;
+  transition: font-size 300ms;
+}
+
+#menu-lateral > li:hover {
+  position: relative;
+  background-color: var(--colorDeSideBarSeleccionado);
+  color: var(--colorDeLetraSideBarHover);
+  border-radius: 13px 0 0 13px;
+  font-size: 18px;
+}
+
+#menu-lateral > li:hover::before {
+  position: absolute;
+  content: "";
+  bottom: 100%;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--colorDeSideBar);
+  border-radius: 0 0 13px 0;
+  box-shadow: 0 17px 0 var(--colorDeSideBarSeleccionado);
+}
+
+#menu-lateral > li:hover::after {
+  position: absolute;
+  content: "";
+  top: 100%;
+  right: 0;
+  width: 30px;
+  height: 30px;
+  background-color: var(--colorDeSideBar);
+  border-radius: 0 13px 0 0;
+  box-shadow: 0 -17px 0 var(--colorDeSideBarSeleccionado);
+}
+
+/* #menu-lateral>li>div{
+    background-color: blue;
+    padding: 10px;
+} */
